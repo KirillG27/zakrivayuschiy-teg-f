@@ -1,1 +1,13 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+:root {
+  --Inter: 'Inter-Variable', sans-serif;
+  --PressStart2P: 'PressStart2P-Regular', sans-serif;
+  --inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem);
+  --basic-weight: 410;
+  --bold-weight: 715;
+  --main-border: 2px solid rgba(0, 0, 0, 1);
+  --background-color: rgba(255, 255, 255, 1);
+  --accent-color: rgba(0, 0, 0, 1);
+  --contour-color: rgba(0, 0, 0, 1);
+  --animation-fill-color: rgba(255, 0, 0, 1);
+}
