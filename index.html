@@ -26,6 +26,7 @@
           </h2>
           <div class="image-container">
             <img class="image" src="./images/car-image.png" alt="Автомобиль" />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -66,7 +67,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -76,10 +77,11 @@
           <h2 class="main__list-title">1 спринт: Я — чистый лист</h2>
           <div class="image-container">
             <img
-              class="image gray-image"
+              class="image filter-invert"
               src="./images/car-image.png"
               alt="Автомобиль"
             />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -122,7 +124,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -132,10 +134,11 @@
           <h2 class="main__list-title">1 спринт: А если не получится?</h2>
           <div class="image-container">
             <img
-              class="image light-image"
+              class="image filter-saturate"
               src="./images/car-image.png"
               alt="Автомобиль"
             />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -176,7 +179,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -186,10 +189,11 @@
           <h2 class="main__list-title">2 спринт: Погоня за идеалом</h2>
           <div class="image-container">
             <img
-              class="image rotate-image"
+              class="image filter-rotate"
               src="./images/car-image.png"
               alt="Автомобиль"
             />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -232,7 +236,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -242,10 +246,11 @@
           <h2 class="main__list-title">2 спринт: О тех, кто рядом</h2>
           <div class="image-container">
             <img
-              class="image sepia-image"
+              class="image filter-sepia"
               src="./images/car-image.png"
               alt="Автомобиль"
             />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -289,7 +294,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -299,10 +304,11 @@
           <h2 class="main__list-title">3 спринт: Обходные стратегии</h2>
           <div class="image-container">
             <img
-              class="image dark-image"
+              class="image filter-grayscale"
               src="./images/car-image.png"
               alt="Автомобиль"
             />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -343,7 +349,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -353,10 +359,11 @@
           <h2 class="main__list-title">3 спринт: Когда опускаются руки</h2>
           <div class="image-container">
             <img
-              class="image blur-image"
+              class="image filter-blur"
               src="./images/car-image.png"
               alt="Автомобиль"
             />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -399,7 +406,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -409,10 +416,11 @@
           <h2 class="main__list-title">«Сейчас я здесь»</h2>
           <div class="image-container">
             <img
-              class="image filter-image"
+              class="image multiple-filters"
               src="./images/car-image.png"
               alt="Автомобиль"
             />
+            <span class="image__label">&lt;/HTML&gt;</span>
           </div>
           <div class="main__list-text">
             <p>
@@ -459,7 +467,7 @@
                   />
                 </svg>
               </button>
-              <button class="card__like-button card__button">
+              <button class="card__like-button button" type="button">
                 <span class="button__text">Like</span>
               </button>
             </div>
@@ -468,7 +476,7 @@
       </ul>
       <button
         type="button"
-        class="dialog__open-button card__button"
+        class="dialog__open-button button"
         onclick="window['dialog'].showModal()"
       >
         <svg
@@ -499,10 +507,10 @@
       <form method="dialog">
         <button
           type="submit"
-          class="dialog__close-button card__button"
+          class="dialog__close-button button"
           onclick="window['dialog'].close()"
         >
-          <span class="button__text">Ок</span>
+          <span class="button__text submit-text">Ок</span>
         </button>
       </form>
     </dialog>

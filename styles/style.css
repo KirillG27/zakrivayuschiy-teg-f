@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--Inter);
+  font-family: var(--main-font);
   font-size: 18px;
   background-image:
     repeating-linear-gradient(
@@ -55,9 +55,9 @@
   margin-block-start: 100px;
   margin-block-end: 98px;
   border: var(--main-border);
-  font-family: var(--PressStart2P);
+  font-family: var(--accent-font);
   background-color: rgba(255, 255, 255, 1);
-  block-size: clamp(20.4375rem, 17.4808rem + 12.6154vw, 23rem);
+  padding-block: clamp(7.5625rem, 7.3644rem + 0.8451vw, 8.125rem);
 }
 
 .header__title {
@@ -95,14 +95,13 @@
   border-block-end: var(--main-border);
 }
 
-.image-container::after {
-  content: "</HTML>";
+ .image__label {
   position: absolute;
   top: 25px;
   right: 25px;
   display: block;
   color: rgba(0, 0, 0, 0.5);
-  font-family: var(--PressStart2P);
+  font-family: var(--accent-font);
   font-size: 14px;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
   mix-blend-mode: hard-light;
@@ -131,6 +130,8 @@
   background-color: var(--background-color);
   inline-size: 38px;
   block-size: 38px;
+  cursor: pointer;
+  transition: border 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -139,7 +140,6 @@
 
 .card__icon-button:focus-visible {
   border: var(--main-border);
-  transition: border 0.3s ease;
 }
 
 .button__container {
@@ -154,10 +154,14 @@
   position: relative;
   z-index: -1;
   color: var(--background-color);
-  font-family: var(--PressStart2P);
+  font-family: var(--accent-font);
   font-size: 14px;
   line-height: 90%;
   mix-blend-mode: difference;
+}
+
+.submit-text {
+  text-transform: uppercase;
 }
 
 .button__icon {
@@ -167,31 +171,31 @@
   mix-blend-mode: difference;
 }
 
-.blur-image {
+.filter-blur {
   filter: blur(6px);
 }
 
-.gray-image {
+.filter-grayscale {
   filter: grayscale(0.7);
 }
 
-.light-image {
+.filter-saturate {
   filter: saturate(300%);
 }
 
-.sepia-image {
+.filter-sepia {
   filter: sepia(1.5);
 }
 
-.rotate-image {
+.filter-rotate {
   filter: hue-rotate(50deg);
 }
 
-.dark-image {
+.filter-invert {
   filter: invert(0.7);
 }
 
-.filter-image {
+.multiple-filters {
   filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.8)) grayscale(0.5) blur(1px);
 }
 
@@ -209,8 +213,6 @@
   gap: 12px;
   align-self: center;
   margin-block-end: 100px;
-  border: var(--main-border);
-  cursor: pointer;
   block-size: 55px;
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
 }
@@ -227,7 +229,7 @@
   gap: 30px;
   border: var(--main-border);
   inline-size: 353px;
-  block-size: 191px;
+  padding-block: 30px;
 }
 
 .dialog::backdrop {
@@ -249,7 +251,7 @@
 }
 
 .dialog__text {
-  font-family: var(--PressStart2P);
+  font-family: var(--accent-font);
   font-size: 14px;
   line-height: 150%;
   text-transform: uppercase;
@@ -260,27 +262,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: var(--main-border);
-  background-color: var(--background-color);
-  cursor: pointer;
   block-size: 38px;
   inline-size: clamp(16.3125rem, 15.6083rem + 3.0047vw, 18.3125rem);
 }
 
 .card__like-button {
-  border: var(--main-border);
-  background-color: var(--background-color);
-  cursor: pointer;
   block-size: 38px;
   inline-size: 130px;
 }
 
-.card__button {
+.button {
   position: relative;
   z-index: 1;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  background-color: var(--background-color);
+  border: var(--main-border);
 }
 
-.card__button::after {
+.button::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -291,17 +291,16 @@
   transform-origin: left;
 }
 
-.card__button:hover::after {
+.button:hover::after {
   transform: scaleX(1);
 }
 
-.card__button:focus {
+.button:focus {
   box-shadow: 2px 2px 0 var(--accent-color);
   outline: none;
-  transition: box-shadow 0.3s ease;
 }
 
-.card__button:focus-visible {
+.button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
@@ -339,6 +338,7 @@
 
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
+  transition: fill 0.3s linear;
 }
 
 .like-icon.is-liked .main-body {
@@ -364,7 +364,7 @@
 }
 
 @supports (-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5)) {
-  .main__list-item::after {
+   .image__label {
     text-shadow: none;
     -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
   }
